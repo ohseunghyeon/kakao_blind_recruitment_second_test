@@ -1,0 +1,7 @@
+{
+  "name": "OSH_KAKAO_SECOND_CODING_TEST",
+  "version": "",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}

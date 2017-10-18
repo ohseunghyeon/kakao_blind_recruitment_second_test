@@ -1,0 +1,26 @@
+node를 사용하여 구현하였으며 request 패키지가 필요합니다.
+package.json 이 있는 위치에서 콘솔로 npm install 혹은 npm i로 필요 패키지를 설치할 수 있습니다.
+
+line 4의 reqOptions 오브젝트에 RESTAPI 요청을 위한 기본 url, login token 등이 있습니다.
+
+아래는 소스 상의 주석에 달린 번호 순서입니다.
+
+1. 토큰 받아오기
+GET {url} 로 받아왔습니다.
+
+2. seed 받아오기
+GET {url} 로 받아왔습니다.
+
+3. seed 별로 다큐먼트를 받아오며 이를 주기적으로 요청합니다.
+
+4. 받아온 document를 add와 del로 분류하여 큐에 50개를 적재하도록 하고
+    50개가 채워질 경우 add나 del의 작업을 수행하도록 합니다.
+
+5. add 하기
+4번의 add 수행 요청에 따라 image feature를 GET으로 받아 POST로 요청합니다.
+
+6. del 하기 
+4번의 del 수행 요청에 따라 image를 id별로 object에 담아 DELETE로 요청합니다.
+
+1초에 50개 요청이라는 제한을 최대한 충족하기 위해서 
+다큐먼트를 받아오는 간격을 변수로 두고 초당 요청 수에 따라 이 변수를 조절합니다. 
