@@ -2,8 +2,8 @@ const fs = require('fs');
 const request = require('request');
 
 const reqOptions = {
-	url: 'http://api.welcome.kakao.com',
-	loginToken: 'Uk8Z317zZn0wkf3pE4Q0655j5hRj0r16N8p5XS04KdJV0',
+	url: '',
+	loginToken: '',
 	reqToken: '',
 	interval: 250,
 	requestCnt: 0
